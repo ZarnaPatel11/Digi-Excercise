@@ -13,7 +13,7 @@
         <!--Random Value-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParcticalTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="ParcticalTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -39,7 +39,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="99" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBd-8c-Kw3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBd-8c-Kw3">
                                                     <rect key="frame" x="19" y="32" width="61" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
@@ -48,8 +48,8 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="bBd-8c-Kw3" firstAttribute="centerY" secondItem="avw-qm-sG9" secondAttribute="centerY" id="3QL-9Q-p9n"/>
-                                            <constraint firstItem="bBd-8c-Kw3" firstAttribute="centerX" secondItem="avw-qm-sG9" secondAttribute="centerX" id="3hx-hU-Ymr"/>
+                                            <constraint firstItem="bBd-8c-Kw3" firstAttribute="centerY" secondItem="avw-qm-sG9" secondAttribute="centerY" id="63v-hp-gjI"/>
+                                            <constraint firstItem="bBd-8c-Kw3" firstAttribute="centerX" secondItem="avw-qm-sG9" secondAttribute="centerX" id="WxO-Ac-y6I"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="textLabel" destination="bBd-8c-Kw3" id="7sW-Fa-GMD"/>
@@ -61,8 +61,11 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AX3-HC-pMZ">
-                                <rect key="frame" x="96" y="483" width="182" height="45"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                <rect key="frame" x="26" y="483" width="323" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="aRJ-42-AJl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="50"/>
                                 <state key="normal" title="Random Value">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -71,46 +74,54 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BeN-Jc-MQb">
-                                <rect key="frame" x="16" y="554" width="118" height="30"/>
+                                <rect key="frame" x="149" y="582" width="86.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="XOe-WW-w2b">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="XF3-KU-w9w"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Unique Number" style="plain" id="JIV-VT-Qy5">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="countUniqueNumber:" destination="BYZ-38-t0r" id="9ld-6E-XZt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VU6-hO-VeS">
-                                <rect key="frame" x="137" y="550" width="215" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Sum of Entered Number"/>
+                                <rect key="frame" x="39" y="576" width="75" height="36"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                <state key="normal" title="Sum">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="findResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H5n-vB-BaH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TJ-hL-zI9">
-                                <rect key="frame" x="116" y="610" width="142" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Unique Number"/>
-                                <connections>
-                                    <action selector="countUniqueNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k1R-IK-OpV"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VU6-hO-VeS" firstAttribute="top" secondItem="AX3-HC-pMZ" secondAttribute="bottom" constant="22" id="2D0-Rm-4D6"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="BeN-Jc-MQb" secondAttribute="leading" id="2ol-xs-fnt"/>
-                            <constraint firstItem="BeN-Jc-MQb" firstAttribute="top" secondItem="AX3-HC-pMZ" secondAttribute="bottom" constant="26" id="95f-yn-VsH"/>
-                            <constraint firstItem="Ehd-ld-u99" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CCb-2Y-erN"/>
-                            <constraint firstItem="AX3-HC-pMZ" firstAttribute="top" secondItem="Ehd-ld-u99" secondAttribute="bottom" constant="8" symbolic="YES" id="CGG-Ic-RXf"/>
-                            <constraint firstItem="7TJ-hL-zI9" firstAttribute="centerX" secondItem="Ehd-ld-u99" secondAttribute="centerX" id="Knn-RP-ZAE"/>
-                            <constraint firstItem="Ehd-ld-u99" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Pn6-AU-9RP"/>
-                            <constraint firstItem="7TJ-hL-zI9" firstAttribute="top" secondItem="VU6-hO-VeS" secondAttribute="bottom" constant="24" id="REG-ZR-dgB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VU6-hO-VeS" secondAttribute="trailing" constant="7" id="Sye-U5-6wQ"/>
-                            <constraint firstItem="AX3-HC-pMZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="V5e-UO-bMd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AX3-HC-pMZ" secondAttribute="trailing" constant="81" id="VR5-pm-aPt"/>
-                            <constraint firstItem="7TJ-hL-zI9" firstAttribute="centerX" secondItem="AX3-HC-pMZ" secondAttribute="centerX" id="VRP-5V-v8w"/>
-                            <constraint firstItem="AX3-HC-pMZ" firstAttribute="leading" secondItem="BeN-Jc-MQb" secondAttribute="trailing" constant="-38" id="XVH-gV-ctH"/>
-                            <constraint firstAttribute="bottom" secondItem="VU6-hO-VeS" secondAttribute="bottom" constant="81" id="fJ3-7a-SGd"/>
-                            <constraint firstItem="AX3-HC-pMZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jNn-Lu-eEm"/>
-                            <constraint firstItem="VU6-hO-VeS" firstAttribute="leading" secondItem="BeN-Jc-MQb" secondAttribute="trailing" constant="3" id="o6t-jb-cKO"/>
+                            <constraint firstItem="BeN-Jc-MQb" firstAttribute="bottom" secondItem="VU6-hO-VeS" secondAttribute="bottom" id="1lP-NN-Gl7"/>
+                            <constraint firstItem="XOe-WW-w2b" firstAttribute="leading" secondItem="Ehd-ld-u99" secondAttribute="leading" id="3uY-0U-a5B"/>
+                            <constraint firstItem="VU6-hO-VeS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="5wF-vV-aVE"/>
+                            <constraint firstAttribute="trailing" secondItem="Ehd-ld-u99" secondAttribute="trailing" id="H6W-79-sAh"/>
+                            <constraint firstItem="BeN-Jc-MQb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="149" id="I5i-c5-KCS"/>
+                            <constraint firstItem="BeN-Jc-MQb" firstAttribute="leading" secondItem="VU6-hO-VeS" secondAttribute="trailing" constant="35" id="ISP-nF-uH6"/>
+                            <constraint firstItem="AX3-HC-pMZ" firstAttribute="top" secondItem="Ehd-ld-u99" secondAttribute="bottom" constant="8" id="YPL-s5-DjZ"/>
+                            <constraint firstItem="AX3-HC-pMZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="ZOX-iT-xkM"/>
+                            <constraint firstAttribute="bottom" secondItem="AX3-HC-pMZ" secondAttribute="bottom" constant="101" id="aaR-2s-CDW"/>
+                            <constraint firstItem="XOe-WW-w2b" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="cge-c8-BZ9"/>
+                            <constraint firstItem="AX3-HC-pMZ" firstAttribute="centerX" secondItem="Ehd-ld-u99" secondAttribute="centerX" id="dsO-Oy-cCd"/>
+                            <constraint firstItem="VU6-hO-VeS" firstAttribute="top" secondItem="AX3-HC-pMZ" secondAttribute="bottom" constant="10" id="g5i-e0-Ohz"/>
+                            <constraint firstItem="AX3-HC-pMZ" firstAttribute="centerX" secondItem="XOe-WW-w2b" secondAttribute="centerX" id="gn0-LW-pau"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VU6-hO-VeS" secondAttribute="bottom" constant="55" id="hrq-mY-D7m"/>
+                            <constraint firstItem="Ehd-ld-u99" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="qPf-Zi-f2j"/>
+                            <constraint firstItem="Ehd-ld-u99" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w5S-kE-VYz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Random Value" id="Afe-vJ-6Ov">
@@ -122,6 +133,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionViewOutlet" destination="Ehd-ld-u99" id="ic5-FL-vxP"/>
+                        <outlet property="countUniqueNumber" destination="JIV-VT-Qy5" id="gD1-V4-a61"/>
+                        <outlet property="findRandomValue" destination="AX3-HC-pMZ" id="0zO-e9-fla"/>
+                        <outlet property="findResult" destination="VU6-hO-VeS" id="682-K8-AIf"/>
                         <outlet property="flowLayoutOutlet" destination="oI4-d6-BWx" id="0i1-lf-awv"/>
                         <outlet property="txtResult" destination="BeN-Jc-MQb" id="aLr-cz-Bic"/>
                     </connections>
@@ -153,7 +167,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivx-HC-gXj">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivx-HC-gXj">
                                                     <rect key="frame" x="22" y="8" width="333" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
